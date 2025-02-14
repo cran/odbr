@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# odbr: Download Data from Brazil’s Origin Destination Surveys <img align="right" src="man/figures/ODBRlogov4hexagonal.png" alt="logo" width="180">
+# odbr: Download Data from Brazil’s Origin Destination Surveys <img align="right" src="man/figures/logo.png" alt="logo" width="180">
 
 <!-- badges: start -->
 
@@ -10,6 +10,8 @@ coverage](https://codecov.io/gh/hsvab/odbr/branch/main/graph/badge.svg)](https:/
 [![R-CMD-check](https://github.com/hsvab/odbr/actions/workflows/R-CMD-check.yaml/badge.svg?branch=main)](https://github.com/hsvab/odbr/actions?query=branch%3Amain)
 [![Champions
 Program](https://raw.githubusercontent.com/ropensci-org/badges/main/svgs/champions-program.svg)](https://ropensci.org/champions/)
+[![CRAN/METACRAN Version](https://www.r-pkg.org/badges/version/odbr)](https://CRAN.R-project.org/package=odbr).[![CRAN/METACRAN Total downloads](https://cranlogs.r-pkg.org/badges/grand-total/odbr?color=blue)](https://CRAN.R-project.org/package=odbr)
+
 
 <!-- badges: end -->
 
@@ -54,6 +56,7 @@ df <- read_od(
   year = 2017,
   harmonize = FALSE
 )
+#> Downloading file to: /tmp/RtmpjicoRU/od_sao_paulo_2017_not_harmonized.csv.gz
 
 # Return zone data from OD Surveys database as sf object at a given city and year
 df <- read_map(
@@ -62,6 +65,7 @@ df <- read_map(
   harmonize = FALSE,
   geometry = "zone"
 )
+#> Downloading file to: /tmp/RtmpjicoRU/zone_sao_paulo_2017_not_harmonized.gpkg
 
 # Return data dictionary from OD Surveys, as data.frame, at a given city and year
 df <- read_dictionary(
@@ -77,7 +81,7 @@ df <- read_dictionary(
 **The original geodetic reference system remained unchanged.**
 
 | City      | Years available              | Harmonized | Dictionary languages | Source                                                                             |
-|-----------|------------------------------|------------|----------------------|------------------------------------------------------------------------------------|
+| --------- | ---------------------------- | ---------- | -------------------- | ---------------------------------------------------------------------------------- |
 | São Paulo | 1977, 1987, 1997, 2007, 2017 | No         | en, es, pt-br        | [Metrô-SP](https://transparencia.metrosp.com.br/dataset/pesquisa-origem-e-destino) |
 
 **There is no harmonized data available yet.**
@@ -100,13 +104,15 @@ Isoda](https://www.instagram.com/redes.urbanas/)
 
 If you want to cite this package, you can cite it as:
 
-- Svab, Haydee; Milz, Beatriz; Oliveira, Diego Rabatone; Pereira,
-  Rafael H. M.
+  - Svab, Haydee; Milz, Beatriz; Oliveira, Diego Rabatone; Pereira,
+    Rafael H. M.
+
+<!-- end list -->
 
 2023) odbr: Download Data from Brazil’s Origin Destination Surveys. R
       package version v0.1.0, <https://CRAN.R-project.org/package=odbr>.
 
-<!-- -->
+<!-- end list -->
 
     bibentry(
       bibtype  = "Manual",

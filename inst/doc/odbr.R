@@ -1,9 +1,12 @@
-## ---- include = FALSE---------------------------------------------------------
+## ----include = FALSE----------------------------------------------------------
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>",
   eval = identical(tolower(Sys.getenv("NOT_CRAN")), "true")
 )
+
+# CRAN OMP THREAD LIMIT to avoid CRAN NOTE
+Sys.setenv(OMP_THREAD_LIMIT = 2)
 
 ## ----example------------------------------------------------------------------
 #  library(odbr)
